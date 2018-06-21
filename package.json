@@ -1,0 +1,23 @@
+{
+  "name": "hanzo-css",
+  "version": "1.0.0",
+  "description": "Hanzo CSS repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "open test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanzoai/hanzo-css.git"
+  },
+  "keywords": [
+    "hanzo",
+    "css"
+  ],
+  "author": "Hanzo LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanzoai/hanzo-css/issues"
+  },
+  "homepage": "https://github.com/hanzoai/hanzo-css#readme"
+}

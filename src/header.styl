@@ -1,0 +1,93 @@
+// START Floating Top Header
+
+header
+  height: $headerHeight
+  margin-top: 10px
+  font-size: 1.125rem
+  color: $textColor1
+  position: fixed
+  z-index: 1000
+  background-color: transparent
+  transition: background-color ($transitionTime) ease-in-out, margin-top ($transitionTime) ease-in-out
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    width: 100%
+    height: $headerDockedMargin
+    top: -10px
+    background-color: transparent
+    transition: background-color ($transitionTime) ease-in-out
+
+  &.undocked
+    background-color: $shadowColor3
+    margin-top: 0
+
+    &:before
+      background-color: $shadowColor3
+
+  *
+    vertical-align: middle
+    color: $textColor1
+
+  nav
+  .nav
+    height: $headerHeight
+    position: relative
+    display: block
+
+    & > *
+      height: 100%
+
+    // START Positional/ResponsiveClasses
+
+    .left
+      position: absolute
+      left: 0
+      top: 0
+
+    +above($tabletWidth + 1)
+      .center
+        width: 100%
+        text-align: center
+
+      .right
+        position: absolute
+        right: 0
+        top: 0
+
+    +between($phoneWidth + 1, $tabletWidth)
+      .center
+      .right
+        float: right
+
+    +below($phoneWidth)
+      .center
+      .right
+        display: none
+
+    // END Positional/ResponsiveClasses
+
+    // START Logical Classes
+
+    .logos
+      .logo-link
+        text-decoration: none
+
+      .logo-image
+        height: 100%
+        padding $spacing
+
+    .primary
+    .secondary
+      & > *
+        display: inline-block
+        height: $headerHeight
+        line-height: $headerHeight
+        padding: 0 ($spacing * 1.5)
+
+    // END Logical Classes
+
+// END Floating Top Header
